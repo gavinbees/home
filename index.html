@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gavin Bess | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a student from UW Bothell focused on data science and analytics for small businesses.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project">
+      <h3>Fine-Dining Reservation Times</h3>
+      <p>This project focuses on analyzing and discussing options to optimize dining time and 
+        sales in a fine-dining setting I worked in, where quality of service and wait times 
+        are crucial for success.
+      </p>
+      
+    </div>
+    <img src="sushi.png" alt="Power BI dashboard showing reservation analysis" class="project1-img">
+
+    <div class="project-details">
+    <h4>Problem</h4>
+    <p>
+      As the maître d' in a fine dining restaurant, the biggest difficulty is informing guests that
+      their table is not yet ready. I've picked up over time what contributes to longer serivce times,
+      and one of the biggest factors is who's serving the table. While I had ideas of who was, on average,
+      taking the most time, I needed the data to back it up. With my administrative role in the restaurant,
+      I knew we had the information available and worked with my managers to gather it together.
+      <br><br>
+      With this data, I would be able to discuss with my managers how to optimize scheduling and dinner
+      timing.
+    </p>
+
+    <h4>Solution</h4>
+    <p>
+      We gathered data from Toast, our POS, and OpenTable, our reservation service, ranging from
+      January 2nd, 2025, to June 30th, 2025. All of the data was aggregated and cleaned in Python
+      using Pandas, while the dashboard was created using Power BI.
+      <br><br>
+      Rather than the focus for this project being a breakdown of sales, I was focused 
+      on the data from OpenTable regarding dining time, while relating that information to sales.
+      <br><br>
+      The data revealed, clearly, that there were major differences in who was turning tables the quickest,
+      and staying within the 1 hour and 45 minute reservation time we offer for guests. It also revealed
+      who was bringing in the most sales, what proportion of reservations were within the time limit,
+      and what duration of time is most efficient for revenue. 
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+    While the chain of command above my managers has the ultimate say on whether anything is changed,
+    the dashboard was sufficient to convince my managers of my suspicions and they were satisfied with
+    what I had returned to them. 
+    <br><br>
+    In agreement with my employers to publish this report, the numbers on revenue have been slightly 
+    altered.
+    </p>
+  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: you@example.com</p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name</p>
+  </footer>
+  <script>
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.project').forEach(project => {
+    observer.observe(project);
+  });
+
+</script>
+</body>
+</html>
