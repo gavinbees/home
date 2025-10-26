@@ -25,6 +25,43 @@
   <section id="portfolio">
     <h2>My Work</h2>
     <div class="project">
+      <h3>Card Shop Bulk Collection</h3>
+      <p><i>October 2025</i><br>In this PowerBI dashboard, you see the summarized contents of a
+        card game shop's bulk collection of Magic The Gathering cards, which was hardly organized and underpriced compared to the true
+        value of some of the cards.
+      </p>
+    </div>
+    <iframe title="manabox" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiY2MxODNiZWQtNzZmZi00Y2MyLWFiNGUtNTAwNWVkNzE1MTE3IiwidCI6ImY2YjZkZDViLWYwMmYtNDQxYS05OWEwLTE2MmFjNTA2MGJkMiIsImMiOjZ9" frameborder="0" allowFullScreen="true"></iframe>
+    
+    <div class="project-details">
+    <h4>Problem</h4>
+    <p>
+      As a regular of a local card shop looking for Magic The Gathering cards, I was browsing the bulk section
+      of cards charged at 25 cents, noticing a couple of cards I was aware of having a much higher market price.
+      I pointed this out to the owner to help them get their stock a little more organized, and offered to build
+      a database for them to more easily gauge prices. 
+    </p>
+
+    <h4>Solution</h4>
+    <p>
+      The cards were scanned using an app called Manabox, exported to csv, then I used a Python script to get more
+      information on each of the cards, including up-to-date pricing. This was done through Scryfall's API,
+      the largest and most reliable for MTG cards.
+      <br><br>
+      Using PowerBI, I built a relationship between the original data set and the expanded information provided by
+      the API, and used DAX queries to categorize the data more efficiently.
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+    Now that the data has all been put together and I got to make a fun report, the real task lies ahead of
+    getting all of the information into a local SQL database, and running a browsable web interface on a store computer
+    to allow customers to see accurate stock and pricing. 
+    </p>
+  </div>
+  <br><br>
+    
+    <div class="project">
       <h3>Fine-Dining Reservation Times</h3>
       <p><i>July 2025</i><br>This project focuses on analyzing and discussing options to optimize dining time and 
         sales in a fine-dining setting I worked in, where quality of service and wait times 
