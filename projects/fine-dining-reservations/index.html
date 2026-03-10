@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fine-Dining Reservation Times — Gavin Bess</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Two levels up to reach assets/ -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav>
+  <a href="../../index.html" class="nav-name">Gavin Bess<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#projects">Projects</a></li>
+    <li><a href="../../index.html#skills">Skills</a></li>
+    <li><a href="../../index.html#education">Education</a></li>
+  </ul>
+</nav>
+
+
+<!-- ============================================================
+     PROJECT HERO
+     ============================================================ -->
+<div class="project-hero">
+  <div class="project-hero-inner">
+
+    <a href="../../index.html#projects" class="project-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to projects
+    </a>
+
+    <div class="project-hero-meta">
+      <span class="project-hero-badge">Analysis</span>
+      <span class="project-hero-date">July 2025</span>
+    </div>
+
+    <h1 class="project-hero-title">Fine-Dining Reservation Times</h1>
+
+    <p class="project-hero-summary">
+      Working as maître d' at a fine-dining restaurant, I suspected certain servers were
+      consistently running over the 1h 45m reservation window, hurting both guest experience
+      and revenue. I built the case from six months of real POS and reservation data to justify
+      schedule changes and dining optimization.
+    </p>
+
+    <div class="project-hero-tags">
+      <span class="project-hero-tag">Python</span>
+      <span class="project-hero-tag">Pandas</span>
+      <span class="project-hero-tag">Power BI</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PROJECT BODY
+     ============================================================ -->
+<div class="project-body">
+
+  <!-- ── LEFT: Written content ── -->
+  <div class="project-content">
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Background</span></div>
+      <h2>The Problem</h2>
+      <p>
+        As the maître d' at a fine-dining restaurant, my least favorite part of the job is
+        telling a guest their table isn't ready when it should have been 15 minutes ago. Over
+        time I developed a sense of which servers in the restaurant tended to run past the
+        time frame we give tables, and I needed data to back up my case.
+      </p>
+      <p>
+        In my administrative role I had access to both our POS system (Toast) and our reservation
+        platform (OpenTable). I worked with my managers to pull it together and make the case properly.
+      </p>
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Approach</span></div>
+      <h2>How I Built It</h2>
+      <p>
+        We gathered six months of data from OpenTable and Toast from January 2nd through June 30th, 2025.
+        OpenTable provided reservation records that detailed server assignments and timestamps from being seated to getting up.
+        Toast provided more detailed sales data and an idea of when courses were sent.
+      </p>
+      <p>
+        All aggregation and cleaning was done in <strong>Python using Pandas</strong>. The main
+        challenge was joining the two datasets: Toast and OpenTable don't share a common key, so
+        I matched records on table number, party size, and time proximity. After cleaning, each
+        row represented a single dining party with their server, seated time, vacated time,
+        total duration, and revenue.
+      </p>
+      <p>
+        The dashboard was built in <strong>Power BI</strong>. The focus was dining time rather
+        than revenue. I wanted to know what proportion of each server's tables stayed within the
+        1h 45m reservation window, and how that related to their sales figures.
+      </p>
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Dashboard</span></div>
+      <h2>The Report</h2>
+      <p>
+        The dashboard breaks down dining times by server, shift, and day of week. Key points include
+        the percentage of tables within the reservation window per server, average duration by
+        time slot, and a revenue-per-minute metric that determines who serves the most efficiently in duration and sales.
+      </p>
+      <p>
+        Revenue figures have been slightly altered in agreement with the restaurant owners before
+        publishing this report.
+      </p>
+
+      <div class="project-embed">
+        <img src="../../assets/images/sushi.png" alt="Power BI dashboard showing fine-dining reservation time analysis"/>
+        <div class="project-embed-caption">
+          Power BI dashboard: dining duration by server, shift efficiency, and revenue per minute.
+          Revenue figures have been adjusted for publication.
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Outcome</span></div>
+      <h2>What Changed</h2>
+      <p>
+        The data shows clear, consistent differences between servers in how often they stayed within 
+        the reservation window. 
+      </p>
+      <p>
+        The dashboard was enough to convince my managers of what I'd suspected. Since then, the
+        usual server lineup for busier weekend shifts has been adjusted to prioritize the most efficient servers.
+        Now that it feels much smoother, I'll return in a couple months with new data to show off the improvement.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ── RIGHT: Sidebar ── -->
+  <aside class="project-sidebar">
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Tools Used</div>
+      <div class="sidebar-tags">
+        <span class="sidebar-tag">Python</span>
+        <span class="sidebar-tag">Pandas</span>
+        <span class="sidebar-tag">Power BI</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Project Details</div>
+      <div class="sidebar-stat-list">
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Type</span>
+          <span class="sidebar-stat-value">Operational Analysis</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Date</span>
+          <span class="sidebar-stat-value">July 2025</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Data Range</span>
+          <span class="sidebar-stat-value">Jan 2 – Jun 30, 2025</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Data Sources</span>
+          <span class="sidebar-stat-value">Toast POS &amp; OpenTable</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Context</span>
+          <span class="sidebar-stat-value">Internal project, fine-dining employer</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <a href="../../index.html" class="footer-name">Gavin Bess<span>.</span></a>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gavin-bess" class="footer-link" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      LinkedIn
+    </a>
+  </div>
+  <div class="footer-copy">© 2025 Gavin Bess</div>
+</footer>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

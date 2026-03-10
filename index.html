@@ -1,139 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gavin Bess | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gavin Bess — Data & Analytics</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <p>Gavin Bess</p>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a student from UW Bothell focused on data science and analytics. In my work so far,
-      I have been assisting individuals and small businesses with data analysis and AI-powered tools
-      for insights and streamlining work. Below you will find some of my work.
-    </p>
-  </section>
 
-  <section id="portfolio">
-    <h2>My Work</h2>
-    <div class="project">
-      <h3>Card Shop Bulk Collection</h3>
-      <p><i>October 2025</i><br>In this PowerBI dashboard, you see the summarized contents of a
-        card game shop's bulk collection of Magic The Gathering cards, which was hardly organized and underpriced compared to the true
-        value of some of the cards.
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav>
+  <a href="#" class="nav-name">Gavin Bess<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+
+<!-- ============================================================
+     ABOUT INTRO
+     ============================================================ -->
+<section class="about-intro" id="about">
+  <div class="about-intro-inner">
+
+    <div class="ai-left">
+      <div class="ai-eyebrow">
+        <span class="ai-eyebrow-text">Data Analytics &amp; Visualization</span>
+      </div>
+      <h1 class="ai-name">Gavin Bess<em></em></h1>
+      <p class="ai-bio">
+        I'm a student at UW Bothell focused on data science and analytics. I've worked with
+        small businesses, building dashboards and translating messy datasets into clear and actionable insights. 
+        I'm looking for opportunities to demonstrate my skills and work on a larger scale.
       </p>
     </div>
-    <iframe title="manabox" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiY2MxODNiZWQtNzZmZi00Y2MyLWFiNGUtNTAwNWVkNzE1MTE3IiwidCI6ImY2YjZkZDViLWYwMmYtNDQxYS05OWEwLTE2MmFjNTA2MGJkMiIsImMiOjZ9" frameborder="0" allowFullScreen="true"></iframe>
-    
-    <div class="project-details">
-    <h4>Problem</h4>
-    <p>
-      As a regular of a local card shop looking for Magic The Gathering cards, I was browsing the bulk section
-      of cards charged at 25 cents, noticing a couple of cards I was aware of having a much higher market price.
-      I pointed this out to the owner to help them get their stock a little more organized, and offered to help find the true values of the cards.
-    </p>
 
-    <h4>Solution</h4>
-    <p>
-      The cards were scanned using an app called Manabox, exported to csv, then I used a Python script to get more
-      information on each of the cards, including up-to-date pricing. This was done through Scryfall's API,
-      the largest and most reliable for MTG cards.
-      <br><br>
-      Using PowerBI, I built a relationship between the original data set and the expanded information provided by
-      the API, and used DAX queries to categorize the data more efficiently.
-    </p>
+    <div class="ai-right">
 
-    <h4>Conclusion</h4>
-    <p>
-    Now that the data has all been put together and I got to make a fun report, the next step would be for
-    the owners to get it all put into a database and run on the local shop computer.
-    </p>
-  </div>
-  <br><br>
-    
-    <div class="project">
-      <h3>Fine-Dining Reservation Times</h3>
-      <p><i>July 2025</i><br>This project focuses on analyzing and discussing options to optimize dining time and 
-        sales in a fine-dining setting I worked in, where quality of service and wait times 
-        are crucial for success. The project was ultimately successful in providing evidence to
-        support a need for a more optimized schedule.
-      </p>
-      
+      <div class="ai-detail-row">
+        <div class="ai-detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div>
+          <div class="ai-detail-label">Education</div>
+          <div class="ai-detail-value">Applied Computing · Data Analytics · UW Bothell</div>
+        </div>
+      </div>
+
+      <div class="ai-detail-row">
+        <div class="ai-detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="ai-detail-label">Location</div>
+          <div class="ai-detail-value">Washington State · Open to remote</div>
+        </div>
+      </div>
+
+      <div class="ai-tools-row">
+        <div class="ai-tools-label">Core tools</div>
+        <div class="ai-tools">
+          <span class="ai-tool">Python</span>
+          <span class="ai-tool">Tableau</span>
+          <span class="ai-tool">Power BI</span>
+          <span class="ai-tool">SQL</span>
+          <span class="ai-tool">R</span>
+          <span class="ai-tool">Excel</span>
+          <span class="ai-tool">ArcGIS</span>
+        </div>
+      </div>
+
+      <div class="ai-avail">
+        <div class="ai-avail-dot"></div>
+        <p><strong>Open to opportunities</strong> — actively seeking internships &amp; entry-level roles</p>
+      </div>
+
     </div>
-    <img src="sushi.png" alt="Power BI dashboard showing reservation analysis" class="project1-img">
-
-    <div class="project-details">
-    <h4>Problem</h4>
-    <p>
-      As the maître d' in a fine dining restaurant, the biggest difficulty is informing guests that
-      their table is not yet ready. I've picked up over time what contributes to longer serivce times,
-      and one of the biggest factors is who's serving the table. While I had ideas of who was, on average,
-      taking the most time, I needed the data to back it up. With my administrative role in the restaurant,
-      I knew we had the information available and worked with my managers to gather it together.
-      <br><br>
-      With this data, I would be able to discuss with my managers how to optimize scheduling and dinner
-      timing.
-    </p>
-
-    <h4>Solution</h4>
-    <p>
-      We gathered data from Toast (our POS) and OpenTable (our reservation service) ranging from
-      January 2nd, 2025, to June 30th, 2025. All of the data was aggregated and cleaned in Python
-      using Pandas, while the dashboard was created using Power BI.
-      <br><br>
-      Rather than the focus for this project being a breakdown of sales, I was focused 
-      on the data from OpenTable regarding dining time, while relating that information to sales.
-      <br><br>
-      The data revealed, clearly, that there were major differences in who was turning tables the quickest,
-      and staying within the 1 hour and 45 minute reservation time we offer for guests. It also revealed
-      who was bringing in the most sales, what proportion of reservations were within the time limit,
-      and what duration of time is most efficient for revenue. 
-    </p>
-
-    <h4>Conclusion</h4>
-    <p>
-    Restaurant ownership has the final say on any major changes, but the dashboard was sufficient to 
-    convince my managers of my suspicions, and have since changed the usual server line-up for
-    the busier weekend shifts.
-    <br><br>
-    In agreement with my employers to publish this report, the numbers on revenue have been slightly 
-    altered.
-    </p>
   </div>
-  </section>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><a href="https://www.linkedin.com/in/gavin-bess" target="_blank">LinkedIn</a></p>
-  </section>
 
-  <footer>
-  </footer>
-  <script>
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section class="projects" id="projects">
+  <div class="section-inner">
 
+    <div class="reveal">
+      <h2 class="section-h2">Projects</h2>
+    </div>
+
+    <div class="project-list reveal">
+
+      <a href="projects/card-shop-bulk-collection/index.html" class="project-row">
+        <div class="pr-num">01</div>
+        <div class="pr-body">
+          <div class="pr-title">Card Shop Bulk Collection</div>
+          <div class="pr-desc">A local Magic: The Gathering card shop was unknowingly selling valuable cards at bulk prices. I scanned the entire collection, enriched the data with live pricing from Scryfall's API, and built a Power BI dashboard to surface the cards worth pulling from the 25-cent bin.</div>
+          <div class="pr-tags">
+            <span class="pr-tag">Python</span>
+            <span class="pr-tag">Scryfall API</span>
+            <span class="pr-tag">Power BI</span>
+            <span class="pr-tag">DAX</span>
+          </div>
+        </div>
+        <div class="pr-type">
+          <span class="pr-type-badge">Dashboard</span>
+          <span class="pr-type-badge">Oct 2025</span>
+        </div>
+        <div class="pr-arrow">↗</div>
+      </a>
+
+      <a href="projects/fine-dining-reservations/index.html" class="project-row">
+        <div class="pr-num">02</div>
+        <div class="pr-body">
+          <div class="pr-title">Fine-Dining Reservation Times</div>
+          <div class="pr-desc">Working as maître d' in fine dining, things get stressful when everything's running behind. I pulled six months of POS, reservation, and table data. With it, I used Python and PowerBI to make the case that scheduling on busy days needs to be much more strict.</div>
+          <div class="pr-tags">
+            <span class="pr-tag">Python</span>
+            <span class="pr-tag">Pandas</span>
+            <span class="pr-tag">Power BI</span>
+            <span class="pr-tag">Toast POS</span>
+            <span class="pr-tag">OpenTable</span>
+          </div>
+        </div>
+        <div class="pr-type">
+          <span class="pr-type-badge">Analysis</span>
+          <span class="pr-type-badge">Jul 2025</span>
+        </div>
+        <div class="pr-arrow">↗</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section class="skills" id="skills">
+  <div class="section-inner">
+
+    <div class="reveal">
+      <h2 class="section-h2">Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="sg-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="sg-title">Languages</div>
+        <div class="sg-items">
+          <div class="sg-item">Python</div>
+          <div class="sg-item">SQL</div>
+          <div class="sg-item">R</div>
+          <div class="sg-item">DAX</div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="sg-icon">
+          <svg viewBox="0 0 24 24"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
+        </div>
+        <div class="sg-title">Tools &amp; Platforms</div>
+        <div class="sg-items">
+          <div class="sg-item">Power BI</div>
+          <div class="sg-item">Tableau</div>
+          <div class="sg-item">Git &amp; GitHub</div>
+          <div class="sg-item">Excel &amp; Google Sheets</div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-3">
+        <div class="sg-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        </div>
+        <div class="sg-title">Concepts</div>
+        <div class="sg-items">
+          <div class="sg-item">Data cleaning</div>
+          <div class="sg-item">Data visualization</div>
+          <div class="sg-item">Machine learning basics</div>
+          <div class="sg-item">Statistical modeling</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+<section class="education" id="education">
+  <div class="section-inner">
+
+    <div class="reveal">
+      <h2 class="section-h2">Education</h2>
+    </div>
+
+    <div class="edu-layout reveal">
+
+      <div class="edu-card edu-currently">
+        <div class="edu-card-label">Graduating Dec 2026</div>
+        <div class="edu-degree">Applied Computing - Data Analytics</div>
+        <div class="edu-school">University of Washington Bothell</div>
+        <div class="edu-year">In Progress</div>
+        <div class="edu-courses-label">Relevant Coursework</div>
+        <div class="edu-courses">
+          <span class="edu-course">Data Structures</span>
+          <span class="edu-course">Statistical Inference</span>
+          <span class="edu-course">Database Systems</span>
+          <span class="edu-course">Machine Learning</span>
+          <span class="edu-course">Data Visualization</span>
+          <span class="edu-course">Linear Algebra</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <a href="#" class="footer-name">Gavin Bess<span>.</span></a>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gavin-bess" class="footer-link" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      LinkedIn
+    </a>
+  </div>
+  <div class="footer-copy">© 2025 Gavin Bess</div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
       }
     });
-  }, {
-    threshold: 0.1
-  });
+  }, { threshold: 0.07 });
 
-  document.querySelectorAll('.project').forEach(project => {
-    observer.observe(project);
-  });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // Dim sibling rows on project hover
+  const rows = document.querySelectorAll('.project-row');
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      rows.forEach(r => { if (r !== row) r.style.opacity = '0.45'; });
+    });
+    row.addEventListener('mouseleave', () => {
+      rows.forEach(r => r.style.opacity = '1');
+    });
+  });
 </script>
+
 </body>
 </html>
-
-

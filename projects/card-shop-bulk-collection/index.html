@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Shop Bulk Collection — Gavin Bess</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Two levels up to reach assets/ -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav>
+  <a href="../../index.html" class="nav-name">Gavin Bess<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#projects">Projects</a></li>
+    <li><a href="../../index.html#skills">Skills</a></li>
+    <li><a href="../../index.html#education">Education</a></li>
+  </ul>
+</nav>
+
+
+<!-- ============================================================
+     PROJECT HERO
+     ============================================================ -->
+<div class="project-hero">
+  <div class="project-hero-inner">
+
+    <a href="../../index.html#projects" class="project-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to projects
+    </a>
+
+    <div class="project-hero-meta">
+      <span class="project-hero-badge">Dashboard</span>
+      <span class="project-hero-date">October 2025</span>
+    </div>
+
+    <h1 class="project-hero-title">Card Shop Bulk Collection</h1>
+
+    <p class="project-hero-summary">
+      A local Magic: The Gathering shop had thousands of cards priced at a flat 25 cents each,
+      including some worth significantly more. I scanned the entire collection, enriched it with
+      live market data, and built a Power BI dashboard so the owner could finally see what they
+      actually had.
+    </p>
+
+    <div class="project-hero-tags">
+      <span class="project-hero-tag">Python</span>
+      <span class="project-hero-tag">Power BI</span>
+      <span class="project-hero-tag">Scryfall API</span>
+      <span class="project-hero-tag">Manabox</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PROJECT BODY
+     ============================================================ -->
+<div class="project-body">
+
+  <!-- ── LEFT: Written content ── -->
+  <div class="project-content">
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Background</span></div>
+      <h2>The Problem</h2>
+      <p>
+        As a regular at a local card shop, I was browsing the bulk section one day and noticed a handful of 
+        cards I knew had real market value. The owner was likely unaware of the price jump in these cards.
+        The collection had never been systematically catalogued, and manually looking up every card wasn't 
+        realistic for them.
+      </p>
+      <p>
+        I pointed it out and offered to help. The steps were simple, I offered to scan everything, find out what
+        it's actually worth, and give the owner a tool they could use going forward.
+      </p>
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Approach</span></div>
+      <h2>How I Built It</h2>
+      <p>
+        The cards were scanned using <strong>Manabox</strong>, a mobile app that reads card names
+        and sets via camera and exports a clean CSV. That gave us a structured starting point.
+      </p>
+      <p>
+        From there, I wrote a Python script to query the <strong>Scryfall API</strong> for each
+        unique card. Scryfall is the most comprehensive and reliable MTG data source available,
+        offering up-to-date pricing in USD, card variants, and more. The script joined that data back 
+        to the original Manabox export, producing an enriched dataset with current market prices per card.
+      </p>
+      <p>
+        In Power BI, I built a relationship between the original scan data and the Scryfall-enriched
+        table. I used <strong>DAX measures</strong> to calculate total collection value, value by
+        set, and to flag any card priced above a configurable threshold, to show which ones had no place in the bulk bin.
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Dashboard</span></div>
+      <h2>The Report</h2>
+      <p>
+        The Power BI dashboard gives a view of the full collection: total cards,
+        estimated market value, and a filterable table sorted by price. The owner can filter by
+        set, price range, or condition to quickly identify the cards worth re-pricing or pulling
+        out of the bulk bin.
+      </p>
+
+      <div class="project-embed">
+        <iframe
+          title="manabox"
+          width="100%"
+          height="480"
+          src="https://app.powerbi.com/view?r=eyJrIjoiY2MxODNiZWQtNzZmZi00Y2MyLWFiNGUtNTAwNWVkNzE1MTE3IiwidCI6ImY2YjZkZDViLWYwMmYtNDQxYS05OWEwLTE2MmFjNTA2MGJkMiIsImMiOjZ9"
+          allowfullscreen="true">
+        </iframe>
+        <div class="project-embed-caption">
+          Interactive Power BI dashboard: filter by set, price range, or condition to explore the collection.
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section reveal">
+      <div class="project-section-label"><span>Outcome</span></div>
+      <h2>What Came Next</h2>
+      <p>
+        The dashboard surfaced a meaningful number of cards that had been sitting in the bulk bin
+        well below market value. The owner now has a complete picture of the collection and a
+        repeatable process: scan with Manabox, run the Python script, refresh the report.
+      </p>
+      <p>
+        The logical next step I hope to help with for the shop would be migrating this into a lightweight 
+        local database, similar to how many card shops run their "single cards for sale" POS.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ── RIGHT: Sidebar ── -->
+  <aside class="project-sidebar">
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Tools Used</div>
+      <div class="sidebar-tags">
+        <span class="sidebar-tag">Python</span>
+        <span class="sidebar-tag">Power BI</span>
+        <span class="sidebar-tag">Scryfall API</span>
+        <span class="sidebar-tag">Manabox</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Project Details</div>
+      <div class="sidebar-stat-list">
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Type</span>
+          <span class="sidebar-stat-value">Dashboard &amp; Data Enrichment</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Date</span>
+          <span class="sidebar-stat-value">October 2025</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Data Source</span>
+          <span class="sidebar-stat-value">Manabox scan export + Scryfall API</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Context</span>
+          <span class="sidebar-stat-value">Personal project for a local business</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <a href="../../index.html" class="footer-name">Gavin Bess<span>.</span></a>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gavin-bess" class="footer-link" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      LinkedIn
+    </a>
+  </div>
+  <div class="footer-copy">© 2025 Gavin Bess</div>
+</footer>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
